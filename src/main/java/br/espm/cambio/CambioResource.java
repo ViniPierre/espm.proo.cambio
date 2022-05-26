@@ -47,4 +47,8 @@ public class CambioResource {
         moedaService.create(moeda);
     }
     
+    @DeleteMapping("/moeda/{id:[a-f0-9]{8}(?:-[a-f0-9]{4}){4}[a-f0-9]{8}}")
+    public void deletarmoeda(@PathVariable String id) {
+        MoedaService.delete(id);
+    }
 }

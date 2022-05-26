@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class MoedaService {
 
     @Autowired
-    private MoedaRepository moedaRepository;
+    private static MoedaRepository moedaRepository;
 
     public List<Moeda> listaAll() {
         return StreamSupport
@@ -43,5 +43,8 @@ public class MoedaService {
                     .map(MoedaModel::to)
                     .orElse(null);
     }
-    
+
+    public static void delete(String id){
+        moedaRepository.deleteById(id);
+    }
 }
