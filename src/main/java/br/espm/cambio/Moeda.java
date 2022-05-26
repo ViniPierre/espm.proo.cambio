@@ -6,38 +6,39 @@ public class Moeda {
 
     private UUID id;
     private String nome;
-    private String simbulo;
+    private String simbolo;
 
     public Moeda() {
-
     }
 
-    public Moeda(String nome, String simbulo) {
+    public Moeda(String nome, String simbolo) {
         this.nome = nome;
-        this.simbulo = simbulo;
+        this.simbolo = simbolo;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public UUID getId() {
         return id;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-    
     public String getNome() {
         return nome;
-    }
-
-    public String getSimbulo() {
-        return simbulo;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setSimbulo(String simbulo) {
-        this.simbulo = simbulo;
+    public String getSimbolo() {
+        return simbolo;
     }
+
+    public void setSimbolo(String simbolo) {
+        this.simbolo = simbolo;
+    }
+    
+
 }
